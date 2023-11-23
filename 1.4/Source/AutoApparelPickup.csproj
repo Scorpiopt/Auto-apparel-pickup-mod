@@ -62,10 +62,14 @@
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AAP_DefOf.cs" />
     <Compile Include="ApparelAction.cs" />
     <Compile Include="ApparelSearchUtility.cs" />
+    <Compile Include="ArmorSearchUtility.cs" />
     <Compile Include="HotSwappableAttribute.cs" />
     <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="JobDriver_WearArmor.cs" />
+    <Compile Include="Pawn_GetGizmos_Patch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SkillJob.cs" />
   </ItemGroup>

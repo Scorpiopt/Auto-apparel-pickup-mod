@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<AAP.EquipArmour>Equip armour</AAP.EquipArmour>
+	<AAP.EquipArmourDesc>Press the button to find and equip armour for combat.</AAP.EquipArmourDesc>
+	<AAP.NoArmourFoundToEquipFor>No armour found to equip for {PAWN_nameDef}.</AAP.NoArmourFoundToEquipFor>
+</LanguageData>
