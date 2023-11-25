@@ -58,9 +58,9 @@ namespace AutoApparelPickup
                     {
                         ApparelAction apparelAction;
                         var apparel = ApparelSearchUtility.FindApparelFor(pawn, __instance.job, skill, out apparelAction);
-                        cachedApparelsByJobs[pawn.CurJob] = apparel; // we do that so we retrieve this apparel later rather than finding it again
-                        if (apparel != null)
+                        if (apparel != null && apparelAction != ApparelAction.DoNothing)
                         {
+                            cachedApparelsByJobs[pawn.CurJob] = apparel; // we do that so we retrieve this apparel later rather than finding it again
                             Toil equipApparel = new Toil();
                             equipApparel.initAction = delegate
                             {

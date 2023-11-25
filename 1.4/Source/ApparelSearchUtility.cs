@@ -64,14 +64,14 @@ namespace AutoApparelPickup
             out ApparelAction apparelAction)
         {
             apparelAction = ApparelAction.DoNothing;
-            var equippedThings = pawn.equipment?.AllEquipmentListForReading.Where(x => validator(pawn, x));
+            var equippedThings = pawn.apparel.WornApparel.Where(x => validator(pawn, x));
             var inventoryThings = pawn.inventory?.innerContainer.OfType<ThingWithComps>().Where(x => validator(pawn, x));
             var outsideThings = new List<ThingWithComps>();
             foreach (var def in apparelDefs)
             {
                 foreach (var apparel in pawn.Map.listerThings.ThingsOfDef(def))
                 {
-                    if (pawn.equipment.Primary?.def != apparel.def && !pawn.inventory.innerContainer.Any(x => x.def == apparel.def)
+                    if (!pawn.apparel.WornApparel.Any(x => x.def == apparel.def) && !pawn.inventory.innerContainer.Any(x => x.def == apparel.def)
                         && validator(pawn, apparel))
                     {
                         outsideThings.Add(apparel as ThingWithComps);
