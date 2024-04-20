@@ -6,6 +6,7 @@
   <description>Pawns will auto equip apparels for jobs.</description>
   <supportedVersions>
     <li>1.4</li>
+    <li>1.5</li>
   </supportedVersions>
   <modDependencies>
     <li>
