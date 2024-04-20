@@ -50,7 +50,8 @@ namespace AutoApparelPickup
             try
             {
                 var pawn = __instance.pawn;
-                if (pawn != null && pawn.RaceProps.Humanlike && __instance.job != null && !ignoredJobs.Contains(__instance.job.def))
+                if (pawn != null && pawn.RaceProps.Humanlike && pawn.IsColonist
+                    && __instance.job != null && !ignoredJobs.Contains(__instance.job.def))
                 {
                     var list = __result.ToList();
                     var skill = ApparelSearchUtility.GetActiveSkill(pawn.CurJob, list);
