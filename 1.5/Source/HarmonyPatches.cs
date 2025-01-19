@@ -50,7 +50,7 @@ namespace AutoApparelPickup
             try
             {
                 var pawn = __instance.pawn;
-                if (pawn != null && pawn.RaceProps.Humanlike && pawn.IsColonist
+                if (pawn != null && pawn.RaceProps.Humanlike && pawn.IsColonist && pawn.Drafted is false
                     && __instance.job != null && !ignoredJobs.Contains(__instance.job.def))
                 {
                     var list = __result.ToList();
