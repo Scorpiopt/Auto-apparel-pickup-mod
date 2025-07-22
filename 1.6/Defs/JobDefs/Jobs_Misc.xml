@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>AAP_EquipArmour</defName>
+    <driverClass>AutoApparelPickup.JobDriver_WearArmor</driverClass>
+    <reportString>equipping armour.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+</Defs>
